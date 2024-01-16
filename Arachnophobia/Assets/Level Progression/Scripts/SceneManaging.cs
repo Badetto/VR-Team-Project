@@ -20,6 +20,8 @@ public class SceneManaging : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = false;
             SceneManager.LoadScene("Main Menu");
         }
     }

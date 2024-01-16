@@ -11,11 +11,6 @@ public class DeletePlayerPrefs : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.M))
         {
             PlayerPrefs.DeleteAll();
-        }
-
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadScene("Main Menu");
-        }     
+        }   
     }
 }

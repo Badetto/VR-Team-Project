@@ -9,9 +9,11 @@ public class LevelSelection : MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = false;
         int levelAt = PlayerPrefs.GetInt("levelAt", 2);
 
-        for (int i = 0; i < lvlButtons.Length; i++)
+        for (int i = 0; i < lvlButtons.Length - 1; i++)
         {
             if (i + 2 > levelAt)
                 lvlButtons[i].interactable = false;
@@ -22,6 +24,8 @@ public class LevelSelection : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = false;
             SceneManager.LoadScene("Main Menu");
         }
     }

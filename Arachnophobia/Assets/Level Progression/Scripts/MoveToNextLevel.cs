@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -17,12 +18,15 @@ public class MoveToNextLevel : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = false;
             SceneManager.LoadScene("Main Menu");
         }
     }
 
     public void OnTriggerEnter(Collider other)
     {
+        Console.WriteLine(other.gameObject.tag);
         if (other.gameObject.tag == "Player")
         {
             if (SceneManager.GetActiveScene().buildIndex == 6)

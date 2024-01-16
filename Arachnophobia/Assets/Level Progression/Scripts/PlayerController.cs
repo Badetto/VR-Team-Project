@@ -18,10 +18,5 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         transform.Translate(moveSpeed * Input.GetAxis("Horizontal") * Time.deltaTime, 0f, moveSpeed * Input.GetAxis("Vertical") * Time.deltaTime);
-
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadScene("Main Menu");
-        }
     }
 }
