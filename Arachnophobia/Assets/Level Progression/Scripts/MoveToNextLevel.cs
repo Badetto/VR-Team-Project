@@ -31,6 +31,8 @@ public class MoveToNextLevel : MonoBehaviour
         {
             if (SceneManager.GetActiveScene().buildIndex == 6)
             {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = false;
                 SceneManager.LoadScene("Main Menu");
                 Debug.Log("You Completed ALL Levels");
             }
