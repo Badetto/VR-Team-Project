@@ -19,7 +19,7 @@ public class MoveToNextLevel : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = false;
+            Cursor.visible = true;
             SceneManager.LoadScene("Main Menu");
         }
     }
@@ -32,7 +32,7 @@ public class MoveToNextLevel : MonoBehaviour
             if (SceneManager.GetActiveScene().buildIndex == 6)
             {
                 Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = false;
+                Cursor.visible = true;
                 SceneManager.LoadScene("Main Menu");
                 Debug.Log("You Completed ALL Levels");
             }

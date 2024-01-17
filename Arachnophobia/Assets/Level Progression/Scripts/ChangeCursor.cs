@@ -8,13 +8,13 @@ public class ChangeCursor : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = false;
+        Cursor.visible = true;
     }
 
     // Update is called once per frame
-    void Update()
+    void Awake()
     {
         Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = false;
+        Cursor.visible = true;
     }
 }

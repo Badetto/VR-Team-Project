@@ -25,7 +25,7 @@ public class LevelSelection : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = false;
+            Cursor.visible = true;
             SceneManager.LoadScene("Main Menu");
         }
     }
